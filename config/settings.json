@@ -1,0 +1,65 @@
+{
+  "claude": {
+    "model": "claude-sonnet-5-5",
+    "effort": "low",
+    "max_turns": 30,
+    "context_warn_percent": 70,
+    "allow_web_tools": true
+  },
+  "audio": {
+    "input_source": null,
+    "output_sink": null,
+    "echo_cancel": false,
+    "input_gain": 1.0
+  },
+  "wake_word": {
+    "enabled": true,
+    "phrase": "hey mei mei",
+    "allow_bare_name": true,
+    "extra_phrases": [
+      "mei chan"
+    ],
+    "sensitivity": 0.6,
+    "wake_model": "auto",
+    "check_window_s": 3.5,
+    "cooldown_s": 1.0,
+    "activation_sound": true,
+    "_note": "wake_model: auto = reuse the main GPU model (best measured); or a model name such as tiny.en for CPU"
+  },
+  "vad": {
+    "threshold": 0.5,
+    "end_silence_ms": 1000,
+    "min_speech_ms": 250,
+    "max_utterance_s": 60,
+    "no_speech_timeout_s": 7
+  },
+  "stt": {
+    "model": "small.en",
+    "device": "auto",
+    "compute_type": "auto",
+    "beam_size": 3,
+    "language": "en"
+  },
+  "tts": {
+    "enabled": true,
+    "voice": "en_GB-jenny_dioco-medium",
+    "speed": 1.0,
+    "volume": 0.9,
+    "max_spoken_chars": 100000
+  },
+  "voice": {
+    "barge_in": true,
+    "followup_window_s": 2,
+    "confirm_by_voice": true,
+    "start_listening_paused": false
+  },
+  "permissions": {
+    "confirm_timeout_s": 60,
+    "terminal_extra_allow_prefixes": [],
+    "large_move_threshold": 10,
+    "ignore_taint": true
+  },
+  "gui": {
+    "start_hidden": false
+  }
+}
